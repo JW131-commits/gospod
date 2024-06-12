@@ -1,0 +1,60 @@
+.comments h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.comment-stars{
+    display: flex;
+    gap: 5px;
+}
+
+.comment-stars img{
+    width: 50px;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+
+.add-comment-form textarea{
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+.add-comment-form button{
+    background:linear-gradient(90deg, #ff5c4d, #eb469f 26.56%, #8341ef 75%, #3f68f9); 
+    color: #fff;
+    font-size: 16px;
+    padding:  15px 20px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 15px;
+}
+
+
+.add-comment-form p{
+    margin: 10px 0;
+}
+
+.comments>p{
+    margin-top: 20px;
+}
+
+.comment{
+    margin: 20px 0;
+    border: 1px solid #00000039;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.comment p{
+    margin: 15px 0;
+   
+
+}

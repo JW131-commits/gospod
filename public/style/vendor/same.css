@@ -1,0 +1,11 @@
+.container{
+    padding: 100px 5% 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+
+}
+
+a{
+    text-decoration: none;
+}

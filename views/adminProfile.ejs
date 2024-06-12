@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('partials/head.ejs')%>
+    <title>Document</title>
+    
+</head>
+<body>
+   <%-include('partials/header.ejs')%>
+
+    <div class="container">
+        <div class="main">
+            <div class="categories">
+                <h3>Жанры</h3>
+                <%
+                    genres.forEach((genre) =>{
+                %>
+                    <a href=""><%=genre.name%></a>     
+                <%
+                    })
+                %>
+                
+               
+           
+            </div>
+            <div class="main-content">
+                <h3>Профиль</h3>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/images/profile.jpg" alt="">
+                    </div>
+                    <div class="profile-info">
+                        <p><span>Полное имя: </span> <%=user.full_name%></p>
+                        <p><span>E-mail: </span><%=loginUser.email%></p>
+                        <a class="edit-btn">Редактировать профиль</a>
+                        <a  href='/api/signout' class="logout-btn">Выход</a>
+                        
+                          
+                        
+                    </div>
+                </div>
+                <h3>Фильмы</h3>
+                <a href="/new" class="add-btn">Добавить фильм</a>
+                
+                <%
+                    films.forEach(item =>{
+
+                
+                %>
+                <div class="main-card">
+                    <div class="card-left">
+                        <div class="film-img">
+                            <img src="<%=item.image%>" alt="">
+                        </div>
+                        <div class="film-info">
+                            <a href="/detail/<%=item.id%>"><%=item.titleRus%></a>
+                            <a href="/detail/<%=item.id%>"><%=item.titleEng%>, <%=item.year%> , <%=item.time%>мин</a>
+                            <a href="/detail/<%=item.id%>"><%=item.country.name%> , <%=item.genre.name%></a>
+                            <a href="/detail/<%=item.id%>">Автор: <%=item.author.full_name%></a>
+                            <a href="/detail/<%=item._id%>" class="film-btn">
+                                Смотреть
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <div class="film-rate">
+                            <p></p>
+                        </div>
+                        <div class="film-btns">
+                            <a href="/edit/<%=item._id%>">
+                                Редактировать
+                              </a>
+                            <a onclick="deleteFilms('<%=item._id%>' , '<%=item.author._id%>')">
+                                Удалить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <%
+                    })
+                %>
+
+
+        </div>
+        </div>
+    </div>
+    <%- include('partials/scripts.ejs')%>
+</body>
+</html>

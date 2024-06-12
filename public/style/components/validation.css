@@ -1,0 +1,14 @@
+.error {
+    color: red;
+    font-size: larger;
+    margin-top: 10px;
+    border-bottom: 1px solid red ;
+    width: 70%;
+    padding-bottom: 5px;
+}
+
+
+#fullNameError, #emailError , #passwordError , #rePasswordError{
+    display: none;
+}
+
