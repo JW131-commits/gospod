@@ -204,6 +204,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Ramina",
   "license": "ISC"
 }
